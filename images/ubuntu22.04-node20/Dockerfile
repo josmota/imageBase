@@ -1,5 +1,9 @@
-# Imagem base: Ubuntu 22.04 + Node.js 20 + dependências comuns
+# Imagem base LEGADA: Ubuntu 22.04 + Node.js 20 + dependências comuns
+# Mantida congelada como release. Node.js 20 está em fim de vida (EOL abr/2026):
+# use apenas para projetos que ainda não migraram.
 FROM ubuntu:22.04
+
+LABEL org.opencontainers.image.description="Base Ubuntu 22.04 + Node.js 20 (legado)"
 
 RUN apt-get update && \
     apt-get -y upgrade && \
